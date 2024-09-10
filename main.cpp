@@ -18,12 +18,15 @@ int main(int argc, const char *argv[]) {
   printf("str2 = '%s'\n", str2);
 
   istrcat(str1, str2);
+  printf("-----------------\n");
   printf("istrcat(str1, str2) = '%s' | len = %lu\n", str1, istrlen(str1));
 
   istrcpy(str3, str1);
 
   printf("istrcmp('%s', '%s') = %d\n", str1, str2, istrcmp(str1, str2));
   printf("istrcmp('%s', '%s') = %d\n", str1, str3, istrcmp(str1, str3));
+  printf("-----------------\n");
+  printf("istrchr('%s', '%c') = %ld\n", str1, ',', (long)istrchr(str1, ','));
 
   return 0;
 }

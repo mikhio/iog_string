@@ -54,5 +54,13 @@ int istrcmp(const char *first_str, const char *second_str) {
   return diff;
 }
 
+const char *istrchr(const char *str, char character) {
+  IOG_ASSERT(str);
+   
+ const char *chr = str;
+  while ((*chr != character) && (chr != '\0'))
+    chr++;
 
+  return chr;
+}
 
